@@ -13,7 +13,6 @@ export default function SyncUser() {
                 email: user?.primaryEmailAddress?.emailAddress,
                 clerkId:user?.id
             })
-
             console.log(response)
         }
 
