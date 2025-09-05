@@ -1,7 +1,7 @@
 import { use } from "react";
 import { Link } from "react-router";
 import { ProblemContext } from "../ProblemContext/ProblemContext";
-import Loader from "./Loader";
+import Loader from "../Component/Loader";
 
 
 const ProblemTable = () => {
