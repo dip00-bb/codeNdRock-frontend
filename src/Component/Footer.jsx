@@ -3,11 +3,11 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10 mt-10">
+    <footer className="bg-[var(--primary-dark)] text-gray-300 py-10 mt-10">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-yellow-400">CodeNdRock</h2>
+          <h2 className="text-2xl font-bold text-[var(--primary-color)]">CodeNdRock</h2>
           <p className="mt-3 text-sm">
             Practice coding, compete with others, and become a better developer.
           </p>
@@ -20,7 +20,7 @@ export default function Footer() {
             <li>
               <Link
                 to="/problems"
-                className="hover:text-yellow-400 transition"
+                className="hover:text-[var(--primary-color)] transition"
               >
                 Problems
               </Link>
@@ -28,18 +28,18 @@ export default function Footer() {
             <li>
               <Link
                 to="/leaderboard"
-                className="hover:text-yellow-400 transition"
+                className="hover:text-[var(--primary-color)] transition"
               >
                 Leaderboard
               </Link>
             </li>
             <li>
-              <Link to="/profile" className="hover:text-yellow-400 transition">
+              <Link to="/profile" className="hover:text-[var(--primary-color)] transition">
                 Profile
               </Link>
             </li>
             <li>
-              <Link to="/register" className="hover:text-yellow-400 transition">
+              <Link to="/register" className="hover:text-[var(--primary-color)] transition">
                 Register
               </Link>
             </li>
@@ -54,7 +54,7 @@ export default function Footer() {
               href="https://github.com/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-yellow-400 transition"
+              className="hover:text-[var(--primary-color)] transition"
             >
               <Github size={22} />
             </a>
@@ -62,7 +62,7 @@ export default function Footer() {
               href="https://linkedin.com/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-yellow-400 transition"
+              className="hover:text-[var(--primary-color)] transition"
             >
               <Linkedin size={22} />
             </a>
@@ -70,7 +70,7 @@ export default function Footer() {
               href="https://twitter.com/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-yellow-400 transition"
+              className="hover:text-[var(--primary-color)] transition"
             >
               <Twitter size={22} />
             </a>
