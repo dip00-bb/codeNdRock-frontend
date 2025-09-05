@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { SignedIn, SignedOut, SignInButton, UserButton, useUser} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/clerk-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,12 +13,7 @@ export default function Navbar() {
     { path: "/profile", name: "Profile" }
   ];
 
-const userifo=useUser()
-console.log(userifo?.user)
 
-console.log(userifo?.user?.fullName)
-console.log(userifo?.user?.id)
-console.log(userifo?.user?.primaryEmailAddress?.emailAddress)
 
   const checkLogin = (
     <>
