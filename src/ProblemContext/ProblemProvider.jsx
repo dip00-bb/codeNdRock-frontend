@@ -13,6 +13,7 @@ const ProblemProvider = ({ children }) => {
             setLoading(true)
             try {
                 const response= await axiosPublic.get('/all-problems')
+                console.log("res res",response)
                 setProblems(response?.data)
                 setLoading(false)
                 setError(false)
@@ -23,6 +24,7 @@ const ProblemProvider = ({ children }) => {
         getAllProblems()
     }, []);
 
+    console.log("prob prob",problems)
     const problemsData={
         problems,
         isLoading,

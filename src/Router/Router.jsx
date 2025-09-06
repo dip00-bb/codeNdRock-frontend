@@ -3,6 +3,7 @@ import App from "../App";
 import LandingPage from "../Component/LandingPage";
 import ProblemTable from "../Pages/ProblemTable";
 import CodeEditor from "../Pages/CodeEditor";
+import ProblemDetails from "../Component/ProblemDetails";
 
 export const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/problems/:slug',
-                Component: CodeEditor
+                Component: ProblemDetails
             }
 
         ]
