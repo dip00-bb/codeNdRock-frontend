@@ -7,7 +7,6 @@ import Loader from "../Component/Loader";
 const ProblemTable = () => {
   const {problems,isLoading} = use(ProblemContext);
 
-  console.log( "kddddddd", problems)
 
   if(isLoading) {
     return <Loader/>

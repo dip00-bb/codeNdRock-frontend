@@ -4,6 +4,7 @@ import LandingPage from "../Component/LandingPage";
 import ProblemTable from "../Pages/ProblemTable";
 import CodeEditor from "../Pages/CodeEditor";
 import ProblemDetails from "../Component/ProblemDetails";
+import Leaderboard from "../Pages/LeaderBoard";
 
 export const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
             {
                 path: '/problems/:slug',
                 Component: ProblemDetails
+            },
+            {
+                path:'leaderboard',
+                Component:Leaderboard
             }
 
         ]

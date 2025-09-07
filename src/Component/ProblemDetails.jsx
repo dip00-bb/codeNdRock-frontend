@@ -16,7 +16,6 @@ const ProblemDetails = () => {
     };
 
     const user = useUser()
-    console.log("user",user)
 
     // inside ProblemDetails
     const [output, setOutput] = useState("");
@@ -46,7 +45,7 @@ const ProblemDetails = () => {
 
     const handlePoint=(resultStatus)=>{
 
-        const updatePoint=axiosPublic.patch('/update-point',{
+        axiosPublic.patch('/update-point',{
             clerkId:user.user.id,
             resultStatus:resultStatus
 

@@ -6,7 +6,6 @@ import { ProblemContext } from '../ProblemContext/ProblemContext';
 const ProblemDescription = ({ matchedProblem }) => {
 
 
-    console.log(matchedProblem)
 
     return (
         <div className="p-4 space-y-6 w-full overflow-auto">
@@ -51,7 +50,6 @@ const ProblemDescription = ({ matchedProblem }) => {
                     <p className="p-2 rounded overflow-x-auto">
                         Output:  {matchedProblem?.example?.output}
 
-                        {console.log("hdfgsdfgkgla",matchedProblem?.example?.output)}
                     </p>
 
                 </div>

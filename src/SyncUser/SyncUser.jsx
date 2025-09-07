@@ -8,12 +8,11 @@ export default function SyncUser() {
     useEffect(() => {
         // Send user data to backend
         const saveUser = async () => {
-            const response = await  axiosPublic.post('/add-user',{
+             await axiosPublic.post('/add-user',{
                 name: user?.fullName,
                 email: user?.primaryEmailAddress?.emailAddress,
                 clerkId:user?.id
             })
-            console.log(response)
         }
 
         if (isSignedIn && user) {saveUser()}
