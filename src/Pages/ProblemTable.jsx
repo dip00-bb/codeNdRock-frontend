@@ -7,13 +7,14 @@ import Loader from "../Component/Loader";
 const ProblemTable = () => {
   const {problems,isLoading} = use(ProblemContext);
 
+  console.log( "kddddddd", problems)
 
   if(isLoading) {
     return <Loader/>
   }
 
   return (
-    <div className="p-4 sm:p-6">
+    <div className="p-4 sm:p-6 h-screen">
       <h1 className="text-2xl font-bold mb-4">All Problems</h1>
 
       <div className="overflow-x-auto">
@@ -38,18 +39,18 @@ const ProblemTable = () => {
                 <td className="px-2 sm:px-4 py-2 text-sm sm:text-base">
                   <span
                     className={`px-2 py-1 rounded-full text-white text-xs sm:text-sm ${
-                      p?.difficulty === "Easy"
+                      p?.difficulty_level === "Easy"
                         ? "bg-green-500"
                         : p?.difficulty === "Medium"
                         ? "bg-yellow-500"
                         : "bg-red-500"
                     }`}
                   >
-                    {p?.difficulty}
+                    {p?.difficulty_level}
                   </span>
                 </td>
                 <td className="px-2 sm:px-4 py-2 text-sm sm:text-base">
-                  {p?.topics.join(", ")}
+                  {p?.topic}
                 </td>
                 <td className="px-2 sm:px-4 py-2 text-sm sm:text-base">
                   <Link

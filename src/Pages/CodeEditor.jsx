@@ -4,7 +4,7 @@ import Editor from "@monaco-editor/react";
 
 const CodeEditor = ({ language = "javascript", value, onChange }) => {
 
-console.log( "vvvvvvvvvv", value)
+
     return (
 
         <div >

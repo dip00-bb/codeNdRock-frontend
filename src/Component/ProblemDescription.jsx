@@ -3,10 +3,10 @@ import Loader from './Loader';
 import { ProblemContext } from '../ProblemContext/ProblemContext';
 
 
-const ProblemDescription = ({matchedProblem}) => {
+const ProblemDescription = ({ matchedProblem }) => {
 
 
-console.log(matchedProblem)
+    console.log(matchedProblem)
 
     return (
         <div className="p-4 space-y-6 w-full overflow-auto">
@@ -17,14 +17,14 @@ console.log(matchedProblem)
             {/* Difficulty & Topics */}
             <div className="flex items-center space-x-4 mb-4">
                 <span
-                    className={`px-2 py-1 rounded-full text-white text-xs ${matchedProblem?.difficulty === "Easy"
+                    className={`px-2 py-1 rounded-full text-white text-xs ${matchedProblem?.difficulty_level === "Easy"
                         ? "bg-green-500"
-                        : matchedProblem?.difficulty === "Medium"
+                        : matchedProblem?.difficulty_level === "Medium"
                             ? "bg-yellow-500"
                             : "bg-red-500"
                         }`}
                 >
-                    {matchedProblem?.difficulty}
+                    {matchedProblem?.difficulty_level}
                 </span>
                 <span className="text-gray-600 text-sm">
                     {/* Topics: {matchedProblem?.topics.join(", ")} */}
@@ -40,16 +40,33 @@ console.log(matchedProblem)
             {/* Examples */}
             <div className="prose max-w-full">
                 <h2 className="text-lg font-semibold">Examples</h2>
-                {matchedProblem?.examples?.map((ex) => (
 
 
-                    <div key={ex.example_num} className="mb-3 p-2 rounded">
-                        <strong>Example {ex.example_num}:</strong>
-                        <pre className="p-2 rounded overflow-x-auto">
-                            {ex.example_text}
-                        </pre>
-                    </div>
-                ))}
+
+                <div className="mb-3 rounded">
+
+                    <p className="p-2 rounded overflow-x-auto">
+                        Input: {matchedProblem?.example?.input}
+                    </p>
+                    <p className="p-2 rounded overflow-x-auto">
+                        Output:  {matchedProblem?.example?.output}
+
+                        {console.log("hdfgsdfgkgla",matchedProblem?.example?.output)}
+                    </p>
+
+                </div>
+
+                <div className="mb-3 rounded">
+                    <p>Instruction</p>
+                    <p className="p-2 rounded overflow-x-auto">
+                        Input: {matchedProblem?.input}
+                    </p>
+                    <p className="p-2 rounded overflow-x-auto">
+                        Output:  {matchedProblem?.output}
+                    </p>
+
+                </div>
+
             </div>
 
             {/* Constraints */}
